@@ -1,0 +1,12 @@
+@import "../vars";
+
+.header {
+  border-bottom: $border;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

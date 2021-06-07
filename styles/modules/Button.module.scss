@@ -1,0 +1,15 @@
+@import "../vars";
+
+.btn {
+  background-color: $secondColor;
+  border: none;
+  color: $mainColor;
+  font-family: $secondFont;
+  font-size: 1rem;
+  padding: 10px 25px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

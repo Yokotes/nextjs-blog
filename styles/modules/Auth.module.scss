@@ -1,0 +1,19 @@
+@import "../vars";
+
+.auth {
+  font-family: $secondFont;
+}
+
+.link {
+  text-decoration: none;
+  color: $secondColor;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.line {
+  margin: 0 5px;
+}
