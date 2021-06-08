@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "username": "test",
+      "password": "123"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "First post",
+      "preview": "Preview text",
+      "text": "First post text",
+      "date": "2021-06-08"
+    },
+    {
+      "id": 2,
+      "title": "test",
+      "text": "test",
+      "preview": "test",
+      "date": "2021-6-8"
+    }
+  ]
+}

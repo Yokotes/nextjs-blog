@@ -1,8 +1,9 @@
+import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import PageTitle from "../components/PageTitle";
 import PostsList from "../components/PostsList";
 
-export default function Index() {
+export default function Index({ posts }) {
   return (
     <Layout title="Home page">
       <div className="page">
@@ -10,14 +11,20 @@ export default function Index() {
           Home page
         </PageTitle>
         <PostsList 
-          posts={[{
-            id: 1,
-            title: "New post",
-            preview: "Random preview text",
-            date: "2020-07-06"
-          }]}
+          posts={posts}
         />
       </div>
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const response = await fetch('http://localhost:4200/posts');
+  const posts = await response.json();
+
+  return {
+    props: {
+      posts
+    }
+  }
 }

@@ -17,3 +17,16 @@
 .line {
   margin: 0 5px;
 }
+
+.profile {
+  font-family: $secondFont;
+}
+
+.btn {
+  margin-right: 20px;
+
+  &Link {
+    color: $mainColor;
+    text-decoration: none;
+  }
+}

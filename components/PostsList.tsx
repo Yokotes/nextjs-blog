@@ -1,5 +1,4 @@
 import styles from '../styles/modules/PostsList.module.scss'
-import Pagination from './Pagination'
 import Post, { PostProps } from './Post'
 
 type PostsListProps = {
@@ -17,6 +16,7 @@ export default function PostsList({ posts }) {
               title={title}
               preview={preview}
               date={date}
+              key={id}
             />
           ))
         }
@@ -24,9 +24,6 @@ export default function PostsList({ posts }) {
           !posts.length && <div>There is no posts</div>
         }
       </div>
-      <Pagination
-        pages={5}
-      />
     </>
   )
 }

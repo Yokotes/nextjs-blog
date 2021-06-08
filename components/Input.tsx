@@ -4,6 +4,7 @@ import styles from '../styles/modules/Input.module.scss'
 type InputProps = {
   id: string;
   label: string;
+  name?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   isPassword?: boolean;
@@ -12,6 +13,7 @@ type InputProps = {
 export default function Input({
   id,
   label,
+  name,
   className,
   onChange,
   isPassword
@@ -24,7 +26,8 @@ export default function Input({
       <input 
         type={`${isPassword ? 'password' : 'text'}`}
         id={id} 
-        className={styles.input} 
+        className={styles.input}
+        name={name}
       />
     </div>
   )
